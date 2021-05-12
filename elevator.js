@@ -27,16 +27,7 @@
         e.on("floor_button_pressed", stateHandler.run);
 
         e.on("passing_floor", function (floorNum) {
-            let p = e.getPressedFloors();
-            // if we're going in the same direction as the button, we can stop
-            if (p.indexOf(floorNum) >= 0) {
-                // remove this floor from destinations
-                e.destinationQueue = e.destinationQueue.filter((d) => (d !== floorNum));
-                e.checkDestinationQueue();
-
-                e.goToFloor(floorNum, true);
-            }
-
+            // do something
         });
 
         floors.forEach(function (floor) {
